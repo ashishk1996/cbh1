@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 
-const createHash = (data) => crypto.createHash("sha3-512").update(data).digest("hex");;
+const createHash = (data) => crypto.createHash("sha3-512").update(data).digest("hex");
 
 exports.deterministicPartitionKey = (event) => {
   const TRIVIAL_PARTITION_KEY = "0";
@@ -8,7 +8,7 @@ exports.deterministicPartitionKey = (event) => {
   let candidate=TRIVIAL_PARTITION_KEY;
 
   if (!event)
-    return candidate
+    return candidate;
 
   if (event.partitionKey) {
     if (typeof event.partitionKey !== "string") {
@@ -26,3 +26,4 @@ exports.deterministicPartitionKey = (event) => {
   
   return candidate;
 };
+
