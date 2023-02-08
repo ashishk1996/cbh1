@@ -16,3 +16,18 @@ Based on the information given, break this ticket down into 2-5 individual ticke
 You will be graded on the level of detail in each ticket, the clarity of the execution plan within and between tickets, and the intelligibility of your language. You don't need to be a native English speaker, but please proof-read your work.
 
 ## Your Breakdown Here
+
+Facilities, Agents, and Shifts tables
+getShiftsByFacility
+generateReport
+
+Assumptions
+1. custom_id of agent by the facility is alphanumeric character of length 32.
+2.
+Tasks
+
+NOTE : ALL ESTIMATIONS IN STORY POINT
+1. Create new table AgentCustomIds(id[auto increment field], Facility(Foreign Key- Facilities Table), Agent(Foreign Key - Agents Table), custom_id(VARCHAR(32))). ESTIMATION - 1
+2. Create data entry page for facilities to add custom id for any given Agent. This should create an entry in AgentCustomIds Table.ESTIMATION - 2
+3. generateReport - Modify function to query AgentCustomIds table and add custom_id attribute in the report. ESTIMATION - 1
+4. getShiftsByFacility - Modify function to query AgentCustomIds table and add custom_id attribute in the agent metadata.ESTIMATION - 1
